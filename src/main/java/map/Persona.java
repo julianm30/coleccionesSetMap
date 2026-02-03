@@ -4,7 +4,7 @@ package map;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Persona implements Comparable<Persona>{
+public class Persona implements Comparable<Persona> {
 
     private String nif;
     private String nombre;
@@ -50,11 +50,10 @@ public class Persona implements Comparable<Persona>{
         this.apellidos = apellidos;
     }
 
-    @Override
     public String toString() {
-        return "Persona{" + "nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fechaNacimiento=" + fechaNacimiento + '}';
+        return "Persona{" + "NIF:" + nif + ", nombre: " + nombre + ", apellidos: " + apellidos + ", fechaNacimiento: "
+                + fechaNacimiento + '}';
     }
-
 
     public int hashCode() {
         int hash = 5;
@@ -62,7 +61,6 @@ public class Persona implements Comparable<Persona>{
         return hash;
     }
 
-    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -77,15 +75,11 @@ public class Persona implements Comparable<Persona>{
         if (!Objects.equals(this.nif, other.nif)) {
             return false;
         }
-        
         return true;
     }
 
-    @Override
     public int compareTo(Persona o) {
         return this.nif.compareToIgnoreCase(o.nif);
     }
-    
-    
-    
+
 }
